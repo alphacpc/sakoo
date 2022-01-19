@@ -1,10 +1,10 @@
 <template>
-  <h2>Single Page</h2>
+  <h2>Mon panier</h2>
 </template>
 
 <script>
 export default {
-  name: 'Single',
+    name: 'Cart'
 }
 </script>
 

@@ -1,10 +1,9 @@
 <template>
   <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-    <router-link to="/single">Single</router-link>
-    <router-link to="/auth">Auth</router-link>
-    <router-link to="/favorite">Favorite</router-link>
+    <router-link to="/">Accueil</router-link>
+    <router-link to="/favories">Favories</router-link>
+    <router-link to="/panier">Mon panier</router-link>
+    <router-link to="/auth">se connecter</router-link>
   </div>
   <router-view/>
 </template>
