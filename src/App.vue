@@ -2,9 +2,18 @@
   <div id="nav">
     <router-link to="/">Home</router-link> |
     <router-link to="/about">About</router-link>
+    <router-link to="/single">Single</router-link>
+    <router-link to="/auth">Auth</router-link>
+    <router-link to="/favorite">Favorite</router-link>
   </div>
   <router-view/>
 </template>
+
+
+
+
+
+
 
 <style>
 #app {
