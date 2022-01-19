@@ -1,13 +1,21 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Accueil</router-link>
-    <router-link to="/favories">Favories</router-link>
-    <router-link to="/panier">Mon panier</router-link>
-    <router-link to="/auth">se connecter</router-link>
-  </div>
+  <Navbar/>
   <router-view/>
 </template>
 
+<script>
+
+import Navbar from "./components/Navbar.vue";
+
+
+export default{
+
+  components:{
+    Navbar
+  }
+
+}
+</script>
 
 
 
@@ -23,16 +31,4 @@
   color: #2c3e50;
 }
 
-#nav {
-  padding: 30px;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
 </style>
