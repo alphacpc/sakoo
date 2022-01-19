@@ -22,6 +22,7 @@ export default {
 </script>
 
 <style>
+
 .divNavigation{
     background: yellowgreen;
     display: flex;
@@ -30,9 +31,12 @@ export default {
     padding: 20px 4%;
 }
 
-
 #nav {
   padding: 30px;
+  background: hotpink;
+  width: 30%;
+  display: flex;
+  justify-content: space-between;
 }
 
 #nav a {
