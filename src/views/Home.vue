@@ -3,9 +3,10 @@
     <img alt="Vue logo" src="../assets/logo.png">
     <h2>Page d'accueil</h2>
 
-    <div  v-for="product in products">
-      <p>{{product.Nom}}</p>
-    </div>
+    <p v-for="product in products" :key="product">{{product.Nom}}</p>
+
+    <p>Salam</p>
+
   </div>
 </template>
 
