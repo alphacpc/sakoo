@@ -3,7 +3,7 @@
     <img alt="Vue logo" src="../assets/logo.png">
     <h2>Page d'accueil</h2>
 
-    <p v-for="product in products" :key="product">{{product.Nom}}</p>
+    <div v-for="product in elements" :key="product">{{product.Nom}}</div>
 
     <p>Salam</p>
 
@@ -14,13 +14,14 @@
 
   import myDatas from "./../data.json";
 
-  const products = myDatas;
-
-  console.log(products);
-
   export default {
     name: 'Home',
-
+    data : () => {
+      return {
+        message : "Hello everybody",
+        elements: myDatas
+      }
+    }
   }
 
 </script>
