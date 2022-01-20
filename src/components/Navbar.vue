@@ -1,7 +1,7 @@
 <template>
     <div class="divNavigation">
         <div class="logo">
-            <img alt="Vue logo" width="100" src="../assets/logo.png">
+            <img alt="Vue logo" width="100" src="../assets/images/logo2.png">
         </div>
 
         <nav id="nav">

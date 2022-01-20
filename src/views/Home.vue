@@ -5,8 +5,9 @@
     <div class="divCardContainer">
       <div v-for="product in elements" :key="product" class="divProduct">
         <div class="divImage">
-          <img width="200" :src="require(`./../assets/images/${product.image}`)" alt="">
+          <img :src="require(`./../assets/images/${product.image}`)" alt="">
         </div>
+        <h4>{{product.Nom}}</h4>
         <div class="divIcons">
           <span>Cart</span>
           <span>Heart</span>
@@ -37,10 +38,46 @@
 
 
 <style>
-.divCardContainer{
-  background-color: greenyellow;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
+  .divCardContainer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .divProduct{
+    margin-bottom: 20px;
+    margin: 2% 2%;
+    width: 20%;
+    transition: all ease .3s;
+    cursor: pointer;
+  }
+
+  .divProduct h4{
+    display: none;
+  }
+
+  .divProduct:hover{
+    transform: scale(1.05);
+  }
+
+  .divProduct:hover > h4{
+    display: block;
+    padding: 10px 20px;
+  }
+
+  .divProduct:hover > .divIcons{
+    background-color: white;
+  }
+
+  .divImage > img{
+    width: 100%;
+  }
+
+  .divIcons{
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+  }
+
 </style>

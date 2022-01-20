@@ -38,7 +38,6 @@ export default{
 }
 
 .divContainer{
-  background: hotpink;
   padding: 40px 10%;
 }
 
