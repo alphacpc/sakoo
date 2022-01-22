@@ -1,7 +1,7 @@
 <template>
     <div class="divNavigation">
         <div class="logo">
-            <img alt="Vue logo" width="100" src="../assets/images/logo2.png">
+            <router-link to="/"><img alt="Vue logo" width="100" src="../assets/images/logo.png"></router-link>
         </div>
 
         <nav id="nav">
@@ -23,29 +23,31 @@ export default {
 
 <style>
 
-.divNavigation{
-    background: yellowgreen;
+  .divNavigation{
+      background: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 4%;
+      /* border-bottom: 1px dashed gray; */
+  }
+
+  #nav {
+    padding: 30px;
+    background: transparent;
+    width: 40%;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    padding: 20px 4%;
-}
+  }
 
-#nav {
-  padding: 30px;
-  background: hotpink;
-  width: 30%;
-  display: flex;
-  justify-content: space-between;
-}
+  #nav a {
+    font-weight: bold;
+    color: #2c3e50;
+  }
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
+  #nav a.router-link-exact-active {
+    color: #42b983;
+  }
 
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
 
 </style>

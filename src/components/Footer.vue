@@ -15,7 +15,6 @@ export default {
 <style>
 Footer{
     background: yellowgreen;
-    margin-top: 100px;
     padding: 40px;
 }
 </style>
