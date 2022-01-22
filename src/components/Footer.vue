@@ -1,7 +1,7 @@
 <template>
 
 <footer>
-  <h2>Footer</h2>
+  <h2>Copyright reserved alphacpc</h2>
 </footer>
 
 </template>
@@ -13,8 +13,14 @@ export default {
 </script>
 
 <style>
-Footer{
-    background: yellowgreen;
-    padding: 40px;
-}
+  Footer{
+      background: rgb(10, 62, 92);
+      padding: 40px;
+  }
+  Footer h2{
+    color: white;
+    text-align: center;
+    letter-spacing: 1px;
+  }
+
 </style>

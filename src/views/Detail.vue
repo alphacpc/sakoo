@@ -78,7 +78,6 @@ export default {
   .divInformations{
     display: flex;
     justify-content: space-between;
-    padding: 0 20px;
   }
 
   .divProductImage{
@@ -92,6 +91,8 @@ export default {
 
   .divProductInfos{
     width: 59%;
+    padding: 0 20px;
+
   }
 
   .divProductInfos h2{

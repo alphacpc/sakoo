@@ -39,7 +39,7 @@ export default{
 
 .divContainer{
   padding: 40px 10%;
-  background-color: rgba(228, 225, 225, 0.76);
+  background-color: rgba(245, 244, 244, 0.205);
 }
 
 </style>
