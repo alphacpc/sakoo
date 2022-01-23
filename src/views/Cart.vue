@@ -1,6 +1,6 @@
 <template>
   
-  <h1>Mon panier</h1>
+  <h1>Mon panier <span>(4 articles)</span></h1>
 
   <div class="cartContainer">
     <table id="products">

@@ -6,7 +6,7 @@
 
         <nav id="nav">
             <router-link to="/">Accueil</router-link>
-            <router-link to="/favories">Favories</router-link>
+            <router-link to="/favoris">Favoris</router-link>
             <router-link to="/panier">Mon panier</router-link>
             <router-link to="/auth">se connecter</router-link>
         </nav>
