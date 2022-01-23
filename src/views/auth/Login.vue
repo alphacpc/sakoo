@@ -11,13 +11,13 @@
       </div>
 
       <div class="formGroup">
-        <span>E</span>
-        <input type="text" placeholder="Entre addresse électronique">
+        <label for="email">E</label>
+        <input type="text" id="email" placeholder="Entre addresse électronique">
       </div>
 
       <div class="formGroup">
-        <span>M</span>
-        <input type="password" placeholder="Entre votre mot de passe">
+        <label for="mdp">M</label>
+        <input type="password" id="mdp" placeholder="Entre votre mot de passe">
       </div>
 
       <div class="divForget">
@@ -29,7 +29,7 @@
       <hr id="signup">
 
       <div class="divSignup">
-        <p>Vous n'avez pas de compte !</p><router-link to="/auth">s'inscrire</router-link>
+        <p>Vous n'avez pas de compte !</p><router-link to="/inscription">s'inscrire</router-link>
       </div>
 
     </form>
@@ -54,7 +54,7 @@
 
   .LoginContainer{
     background: white;
-    padding: 100px 0 100px 0;
+    padding: 100px 0 140px 0;
     display: flex;
     justify-content: center;
   }
@@ -84,8 +84,14 @@
     justify-content: space-between;
   }
 
-  .formGroup > span{
+  .formGroup > label{
     margin-right: 10px;
+    background: tomato;
+    border-radius: 50%;
+    padding: 4px 8px;
+    color: whitesmoke;
+    font-weight: bold;
+    cursor: pointer;
   }
 
   .formGroup input{

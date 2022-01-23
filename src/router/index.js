@@ -4,6 +4,7 @@ import Detail from '../views/Detail.vue';
 import Cart from '../views/Cart.vue';
 import Favorites from '../views/Favorites.vue';
 import Auth from '../views/auth/Login.vue';
+import Signup from '../views/auth/Signup.vue';
 
 const routes = [
   {
@@ -30,6 +31,11 @@ const routes = [
     path: '/auth',
     name: 'Login',
     component: Auth
+  },
+  {
+    path: '/inscription',
+    name: 'Signup',
+    component: Signup
   },
 ]
 
