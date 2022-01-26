@@ -8,11 +8,10 @@
 
       <div class="divProductInfos">
         <div class="productName">
-          <h2>Tommy Hilfiger</h2>
-          <h2>{{product.nom}}</h2>
+          <h2>{{product.marque}}</h2>
           <hr id="separeted"/>
-          <h1>RELAXED TOTE SET - Cabas</h1>
-          <h4 class="product-price">12000 FCFA</h4>
+          <h1>{{product.nom}}</h1>
+          <h4 class="product-price">{{product.prix}} FCFA</h4>
         </div>
 
         <div class="productDescription">
@@ -47,11 +46,11 @@
     
     </div>
 
-    <div class="relatedProducts">
+    <div class="relatedProducts" v-if="relatedProduct">
       <h2>Produits associés</h2>
 
       <div class="productList">
-        <router-link v-for="item in [1,2,3,4]" :key="item" to="/detail/sakoo"><img src="./../assets/images/sac7.jpg" alt=""></router-link>
+        <router-link v-for="item in relatedProduct" :key="item" to="/detail/sakoo"><img :src="require(`./../assets/images/${item.image}`)" alt=""></router-link>
       </div>
     </div>
 
@@ -70,17 +69,23 @@
   data: ()=>{
     return{
       name: "",
+      marque:"",
       datas: myDatas
     }
   },
   mounted(){
     const route = useRoute();
-    this.name = route.params.name
+    this.name = route.params.name;
+    this.marque = route.params.marque;
   },
   computed:{
       product(){
         let tab = this.datas.filter(product => product.nom == this.name);
         return tab[0];
+      },
+      relatedProduct(){
+        return this.datas.filter(product => product.marque == this.marque);
+        
       }
   }
 }
@@ -120,6 +125,11 @@
     letter-spacing: 1px;
     text-transform: capitalize;
   }
+
+  .productName h2{
+    text-transform: uppercase;
+  }
+
   .productCaracteristique h2{
     padding: 30px 0 10px 0;
   }

@@ -1,8 +1,9 @@
 [
     {
         "nom": "SMALL BACKPACK UNISEX - Sac à dos",
-        "marque":"hello",
+        "marque":"Champion",
         "image": "sac12.webp",
+        "prix": "15000",
         "Matière": "Polyuréthane, polyester",
         "Doublure": "Polyuréthane, polyester",
         "Sport": "Fitness",
@@ -20,8 +21,9 @@
     },
     {
         "nom": "VEZZOLA BACKPACK FRONT ZIP UNISEX - Sac à dos",
-        "marque":"hello",
+        "marque":"Guess",
         "image": "sac4.webp",
+        "prix": 20000,
         "Matière": "Polyuréthane",
         "Doublure": "Polyester",
         "Compartiments": "Compartiment pour PC portable",
@@ -36,8 +38,9 @@
     },
     {
         "nom": "NF1888PO - Cabas",
-        "marque":"Lacoste ",
+        "marque":"Lacoste",
         "image": "sac9.webp",
+        "prix": 12000,
         "Matière": "Chlorure de polyvinyle",
         "Doublure": "Polyester",
         "Fermeture": "Fermeture éclair",
@@ -50,8 +53,9 @@
     },
     {
         "nom": "MAY - Sac à main",
-        "marque":"hello",
+        "marque":"Parfois",
         "image": "sac2.webp",
+        "prix": 15000,
         "Matière" : "Imitation cuir",
         "Doublure": "Polyester",
         "Fermeture": "Fermeture éclair",
@@ -62,9 +66,10 @@
         "Anse/bandoulière": "11 cm en taille One Size"
     },
     {
-        "nom": "Anna Field Sac à main",
-        "marque":"hello",
+        "nom": "Sac à main",
+        "marque":"Anna Field",
         "image": "sac8.jpg",
+        "prix": 12000,
         "Matière": "Polyuréthane",
         "Doublure": "Polyester",
         "Compartiments": "Compartiment pour téléphone portable",
@@ -80,6 +85,7 @@
         "nom": "RELAXED - Sac à dos",
         "marque":"Tommy Hilfiger",
         "image": "sac14.jpg",
+        "prix": 20000,
         "Matière": "Polyester",
         "Doublure": "Textile",
         "Compartiments": "Compartiment pour PC portable",
@@ -92,8 +98,9 @@
     },
     {
         "nom": "CROSSBODY BAG LANE - Sac bandoulière",
-        "marque":"hello",
+        "marque":"Parfois",
         "image": "sac3.jpg",
+        "prix": 10000,
         "Matière": "Polyuréthane, polyester",
         "Doublure": "Polyester",
         "Fermeture": "Fermoir aimanté",
@@ -106,8 +113,9 @@
     },
     {
         "nom": "HERITAGE UNISEX - Sac à dos",
-        "marque":"hello",
+        "marque":"Nike",
         "image": "sac7.jpg",
+        "prix": 14000,
         "Matière": "Nylon, polyester",
         "Doublure": "Polyester",
         "Compartiments": "Compartiment pour PC portable",
@@ -120,9 +128,10 @@
         "Anse/bandoulière": "7 cm en taille One Size"
     },
     {
-        "nom": "Anna Field Sac à main",
-        "marque":"hello",
+        "nom": "Sac à main",
+        "marque":"Anna Field",
         "image": "sac17.jpg",
+        "prix": 11000,
         "Matière": "Polyuréthane",
         "Doublure": "Polyester",
         "Fermeture": "Fermeture éclair",
@@ -135,8 +144,9 @@
     },
     {
         "nom": "VIKKY BACKPACK - Sac à dos",
-        "marque":"hello",
+        "marque":"Guess",
         "image": "sac20.jpg",
+        "prix": 18000,
         "Matière": "Polyuréthane",
         "Doublure": "Coton, polyester",
         "Fermeture": "Fermeture éclair",
@@ -150,8 +160,9 @@
     },
     {
         "nom": "BACKPACK UNISEX - Sac à dos",
-        "marque":"hello",
+        "marque":"Addidas",
         "image": "sac16.jpg",
+        "prix": 10000,
         "Matière": "Polyester",
         "Doublure": "Textile",
         "Fermeture": "Fermeture éclair",
@@ -164,9 +175,10 @@
         "Anse/bandoulière": "5 cm en taille One Size"
     },
     {
-        "nom": "lacoste Sac bandoulière",
-        "marque":"hello",
+        "nom": "Sac bandoulière",
+        "marque":"Lacoste",
         "image": "sac1.jpg",
+        "prix": 16000,
         "Matière": "Chlorure de polyvinyle",
         "Motif / Couleur": "Imprimé animal",
         "Référence": "LA251H0AC-A11",
@@ -176,9 +188,10 @@
         "Anse/bandoulière": "23 cm en taille One Size"
     },
     {
-        "nom": "tommy hilfiger RELAXED TOTE SET - Cabas",
-        "marque":"hello",
+        "nom": "RELAXED TOTE SET - Cabas",
+        "marque":"Tommy Hilfiger",
         "image": "sac11.jpg",
+        "prix": 17500,
         "Matière": "Polyuréthane, polyester",
         "Doublure": "Textile",
         "Fermeture": "Fermeture éclair",
@@ -191,8 +204,9 @@
     },
     {
         "nom": "DAILY CLASSIC - Sac à main",
-        "marque":"hello",
+        "marque":"Lacoste",
         "image": "sac5.jpg",
+        "prix": 16000,
         "Matière": "Chlorure de polyvinyle",
         "Doublure": "Textile",
         "Fermeture": "Fermeture éclair",
@@ -206,8 +220,9 @@
     },
     {
         "nom": "PCABBY CROSS BODY - Sac bandoulière",
-        "marque":"hello",
+        "marque":"Inconnuto",
         "image": "sac15.jpg",
+        "prix": 10000,
         "Matière": "Polyuréthane, polyester",
         "Doublure": "Textile",
         "Fermeture": "Fermoir aimanté",
@@ -219,9 +234,10 @@
         "Anse/bandoulière": "7 cm en taille One Size"
     },
     {
-        "nom": "Fila NEW BACKPACK SCOOL TWO - Sac à dos",
-        "marque":"hello",
+        "nom": "NEW BACKPACK SCOOL TWO - Sac à dos",
+        "marque":"Fila",
         "image": "sac19.jpg",
+        "prix": 12000,
         "Matière": "Polyester",
         "Doublure": "Polyester",
         "Fermeture": "Fermeture éclair",
@@ -233,9 +249,10 @@
         "Anse/bandoulière": "8 cm en taille One Size"
     },
     {
-        "nom": "Tommy Hilfiger BABY CHANGING BAG - Sac à langer",
-        "marque":"hello",
+        "nom": "BABY CHANGING BAG - Sac à langer",
+        "marque":"Tommy Hilfiger",
         "image": "sac10.jpg",
+        "prix": 13000,
         "Matière": "Polyester",
         "Doublure": "Polyester",
         "Fermeture": "Fermeture éclair",
@@ -248,8 +265,9 @@
     },
     {
         "nom": "River Island FLORAL MONOGRAM SHOPPER - Cabas",
-        "marque":"hello",
+        "marque":"Inconnuto",
         "image": "sac15.jpg",
+        "prix": 11000,
         "Matière": "Polyuréthane",
         "Doublure": "Textile",
         "Fermeture": "Fermoir aimanté",
@@ -261,9 +279,10 @@
         "Anse/bandoulière": "26 cm en taille One Size"
     },
     {
-        "nom": "Guess DOWNTOWN - Sac à main",
-        "marque":"hello",
+        "nom": "DOWNTOWN - Sac à main",
+        "marque":"Guess",
         "image": "sac18.jpg",
+        "prix": 12500,
         "Matière": "Polyuréthane",
         "Doublure": "Coton, polyester",
         "Fermeture": "Fermoir aimanté",
@@ -277,8 +296,9 @@
     },
     {
         "nom": "Zign Sac à dos",
-        "marque":"hello",
+        "marque":"Lacoste",
         "image": "sac5.jpg",
+        "prix": 16000,
         "Matière": "Polyester",
         "Doublure": "Polyester",
         "Compartiments": "Compartiment pour PC portable",
