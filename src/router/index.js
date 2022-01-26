@@ -23,9 +23,10 @@ const routes = [
     component: Cart
   },
   {
-    path: '/detail/:name',
+    path: '/:name',
     name: 'Detail',
-    component: Detail
+    component: Detail,
+    props: true
   },
   {
     path: '/auth',

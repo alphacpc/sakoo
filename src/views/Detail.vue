@@ -1,7 +1,7 @@
 <template>
   
   <div class="singleContainer single-product">
-
+    {{product.Nom}}
     <div class="divInformations">
       <div class="divProductImage">
         <img src="./../assets/images/sac14.jpg" alt="single product">
@@ -62,8 +62,27 @@
 </template>
 
 <script>
-export default {
+  import myDatas from "./../data.json";
+  import { useRoute } from "vue-router";
+
+  export default {
   name: 'Detail',
+  data: ()=>{
+    return{
+      name: "",
+      datas: myDatas
+    }
+  },
+  mounted(){
+    const route = useRoute();
+    console.log("my route : ", route.params.name);
+    this.name = route.params.name
+  },
+  computed:{
+      product(){
+        return this.datas.filter(product => product.Nom == this.name);
+      }
+  }
 }
 </script>
 
