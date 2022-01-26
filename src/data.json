@@ -1,6 +1,7 @@
 [
     {
-        "Nom": "SMALL BACKPACK UNISEX - Sac à dos",
+        "nom": "SMALL BACKPACK UNISEX - Sac à dos",
+        "marque":"hello",
         "image": "sac12.webp",
         "Matière": "Polyuréthane, polyester",
         "Doublure": "Polyuréthane, polyester",
@@ -18,7 +19,8 @@
         "Anse/bandoulière": "8 cm en taille One Size"
     },
     {
-        "Nom": "VEZZOLA BACKPACK FRONT ZIP UNISEX - Sac à dos",
+        "nom": "VEZZOLA BACKPACK FRONT ZIP UNISEX - Sac à dos",
+        "marque":"hello",
         "image": "sac4.webp",
         "Matière": "Polyuréthane",
         "Doublure": "Polyester",
@@ -33,7 +35,8 @@
         "Anse/bandoulière": "6.5 cm en taille One Size"
     },
     {
-        "Nom": "Lacoste NF1888PO - Cabas",
+        "nom": "NF1888PO - Cabas",
+        "marque":"Lacoste ",
         "image": "sac9.webp",
         "Matière": "Chlorure de polyvinyle",
         "Doublure": "Polyester",
@@ -46,7 +49,8 @@
         "Anse/bandoulière": "27 cm en taille One Size"
     },
     {
-        "Nom": "MAY - Sac à main",
+        "nom": "MAY - Sac à main",
+        "marque":"hello",
         "image": "sac2.webp",
         "Matière" : "Imitation cuir",
         "Doublure": "Polyester",
@@ -58,7 +62,8 @@
         "Anse/bandoulière": "11 cm en taille One Size"
     },
     {
-        "Nom": "Anna Field Sac à main",
+        "nom": "Anna Field Sac à main",
+        "marque":"hello",
         "image": "sac8.jpg",
         "Matière": "Polyuréthane",
         "Doublure": "Polyester",
@@ -72,7 +77,8 @@
         "Anse/bandoulière": "26 cm en taille One Size"
     },
     {
-        "Nom": "Tommy Hilfiger RELAXED - Sac à dos",
+        "nom": "RELAXED - Sac à dos",
+        "marque":"Tommy Hilfiger",
         "image": "sac14.jpg",
         "Matière": "Polyester",
         "Doublure": "Textile",
@@ -85,7 +91,8 @@
         "Anse/bandoulière": "8 cm en taille One Size"
     },
     {
-        "Nom": "CROSSBODY BAG LANE - Sac bandoulière",
+        "nom": "CROSSBODY BAG LANE - Sac bandoulière",
+        "marque":"hello",
         "image": "sac3.jpg",
         "Matière": "Polyuréthane, polyester",
         "Doublure": "Polyester",
@@ -98,7 +105,8 @@
         "Anse/bandoulière": "49 cm en taille One Size"
     },
     {
-        "Nom": "HERITAGE UNISEX - Sac à dos",
+        "nom": "HERITAGE UNISEX - Sac à dos",
+        "marque":"hello",
         "image": "sac7.jpg",
         "Matière": "Nylon, polyester",
         "Doublure": "Polyester",
@@ -112,7 +120,8 @@
         "Anse/bandoulière": "7 cm en taille One Size"
     },
     {
-        "Nom": "Anna Field Sac à main",
+        "nom": "Anna Field Sac à main",
+        "marque":"hello",
         "image": "sac17.jpg",
         "Matière": "Polyuréthane",
         "Doublure": "Polyester",
@@ -125,7 +134,8 @@
         "Anse/bandoulière": "14 cm en taille One Size"
     },
     {
-        "Nom": "VIKKY BACKPACK - Sac à dos",
+        "nom": "VIKKY BACKPACK - Sac à dos",
+        "marque":"hello",
         "image": "sac20.jpg",
         "Matière": "Polyuréthane",
         "Doublure": "Coton, polyester",
@@ -139,7 +149,8 @@
         "Anse/bandoulière": "5 cm en taille One Size"
     },
     {
-        "Nom": "BACKPACK UNISEX - Sac à dos",
+        "nom": "BACKPACK UNISEX - Sac à dos",
+        "marque":"hello",
         "image": "sac16.jpg",
         "Matière": "Polyester",
         "Doublure": "Textile",
@@ -153,7 +164,8 @@
         "Anse/bandoulière": "5 cm en taille One Size"
     },
     {
-        "Nom": "lacoste Sac bandoulière",
+        "nom": "lacoste Sac bandoulière",
+        "marque":"hello",
         "image": "sac1.jpg",
         "Matière": "Chlorure de polyvinyle",
         "Motif / Couleur": "Imprimé animal",
@@ -164,7 +176,8 @@
         "Anse/bandoulière": "23 cm en taille One Size"
     },
     {
-        "Nom": "tommy hilfiger RELAXED TOTE SET - Cabas",
+        "nom": "tommy hilfiger RELAXED TOTE SET - Cabas",
+        "marque":"hello",
         "image": "sac11.jpg",
         "Matière": "Polyuréthane, polyester",
         "Doublure": "Textile",
@@ -177,7 +190,8 @@
         "Anse/bandoulière": "13 cm en taille One Size"
     },
     {
-        "Nom": "DAILY CLASSIC - Sac à main",
+        "nom": "DAILY CLASSIC - Sac à main",
+        "marque":"hello",
         "image": "sac5.jpg",
         "Matière": "Chlorure de polyvinyle",
         "Doublure": "Textile",
@@ -191,7 +205,8 @@
         "Largeur": "10 cm en taille One Size"
     },
     {
-        "Nom": "PCABBY CROSS BODY - Sac bandoulière",
+        "nom": "PCABBY CROSS BODY - Sac bandoulière",
+        "marque":"hello",
         "image": "sac15.jpg",
         "Matière": "Polyuréthane, polyester",
         "Doublure": "Textile",
@@ -204,7 +219,8 @@
         "Anse/bandoulière": "7 cm en taille One Size"
     },
     {
-        "Nom": "Fila NEW BACKPACK SCOOL TWO - Sac à dos",
+        "nom": "Fila NEW BACKPACK SCOOL TWO - Sac à dos",
+        "marque":"hello",
         "image": "sac19.jpg",
         "Matière": "Polyester",
         "Doublure": "Polyester",
@@ -217,7 +233,8 @@
         "Anse/bandoulière": "8 cm en taille One Size"
     },
     {
-        "Nom": "Tommy Hilfiger BABY CHANGING BAG - Sac à langer",
+        "nom": "Tommy Hilfiger BABY CHANGING BAG - Sac à langer",
+        "marque":"hello",
         "image": "sac10.jpg",
         "Matière": "Polyester",
         "Doublure": "Polyester",
@@ -230,7 +247,8 @@
         "Anse/bandoulière": "11 cm en taille One Size"
     },
     {
-        "Nom": "River Island FLORAL MONOGRAM SHOPPER - Cabas",
+        "nom": "River Island FLORAL MONOGRAM SHOPPER - Cabas",
+        "marque":"hello",
         "image": "sac15.jpg",
         "Matière": "Polyuréthane",
         "Doublure": "Textile",
@@ -243,7 +261,8 @@
         "Anse/bandoulière": "26 cm en taille One Size"
     },
     {
-        "Nom": "Guess DOWNTOWN - Sac à main",
+        "nom": "Guess DOWNTOWN - Sac à main",
+        "marque":"hello",
         "image": "sac18.jpg",
         "Matière": "Polyuréthane",
         "Doublure": "Coton, polyester",
@@ -257,7 +276,8 @@
         "Anse/bandoulière": "35 cm en taille One Size"
     },
     {
-        "Nom": "Zign Sac à dos",
+        "nom": "Zign Sac à dos",
+        "marque":"hello",
         "image": "sac5.jpg",
         "Matière": "Polyester",
         "Doublure": "Polyester",

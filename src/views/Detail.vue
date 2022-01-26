@@ -1,15 +1,15 @@
 <template>
   
-  <div class="singleContainer single-product">
-    {{product.Nom}}
+  <div class="singleContainer single-product" v-if="product">
     <div class="divInformations">
       <div class="divProductImage">
-        <img src="./../assets/images/sac14.jpg" alt="single product">
+        <img :src="require(`./../assets/images/${product.image}`)" alt="single product">
       </div>
 
       <div class="divProductInfos">
         <div class="productName">
           <h2>Tommy Hilfiger</h2>
+          <h2>{{product.nom}}</h2>
           <hr id="separeted"/>
           <h1>RELAXED TOTE SET - Cabas</h1>
           <h4 class="product-price">12000 FCFA</h4>
@@ -63,7 +63,7 @@
 
 <script>
   import myDatas from "./../data.json";
-  import { useRoute } from "vue-router";
+  import { useRoute } from "vue-router";  
 
   export default {
   name: 'Detail',
@@ -75,12 +75,12 @@
   },
   mounted(){
     const route = useRoute();
-    console.log("my route : ", route.params.name);
     this.name = route.params.name
   },
   computed:{
       product(){
-        return this.datas.filter(product => product.Nom == this.name);
+        let tab = this.datas.filter(product => product.nom == this.name);
+        return tab[0];
       }
   }
 }

@@ -16,8 +16,8 @@
 
         <div class="simpleInfos">
           <router-link :to="{
-            name:'Detail', params:{name:product.Nom }
-          }"><h4>{{product.Nom}}</h4></router-link>
+            name:'Detail', params:{name:product.nom }
+          }"><h4>{{product.nom}}</h4></router-link>
         </div>
         
         <div class="divIcons">
@@ -52,7 +52,7 @@
     },
     computed:{
       productFiltered(){
-        return this.elements.filter((product) => product.Nom.toLowerCase().includes(this.searchKey.toLowerCase()));
+        return this.elements.filter((product) => product.nom.toLowerCase().includes(this.searchKey.toLowerCase()));
       }
     }
   }
