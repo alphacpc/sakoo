@@ -37,8 +37,10 @@
         <div class="productCaracteristique">
           <h2>caractéristiques</h2>
           <ul>
-            <li><span class="label">Couleur</span><span class="value">Noir</span></li>
-            <li v-for="item in [1,2,3,4]" :key="item"><span class="label">Matiére</span><span class="value">Polyuréthane, polyester</span></li>
+            <li v-for="key in keys" :key="key" :class="`${key}`">
+              <span class="label">{{key}}</span><span class="value">{{product[key]}}</span>
+            </li>
+            <!-- <li v-for="item in [1,2,3,4]" :key="item"><span class="label">Matiére</span><span class="value">Polyuréthane, polyester</span></li> -->
           </ul>
         </div>
 
@@ -46,11 +48,17 @@
     
     </div>
 
-    <div class="relatedProducts" v-if="relatedProduct">
+    <div class="relatedProducts" v-if="relatedProduct.length > 0">
       <h2>Produits associés</h2>
 
       <div class="productList">
-        <router-link v-for="item in relatedProduct" :key="item" to="/detail/sakoo"><img :src="require(`./../assets/images/${item.image}`)" alt=""></router-link>
+        <!-- <router-link v-for="item in relatedProduct" :key="item" :to="{name:'Detail', params:{name:item.nom , marque:item.marque}}">
+          <img :src="require(`./../assets/images/${item.image}`)" alt="">
+        </router-link> -->
+
+        <a v-for="item in relatedProduct" :key="item" :href="$router.resolve({name:'Detail', params:{ name:item.nom}}).href">
+          <img :src="require(`./../assets/images/${item.image}`)" alt="">
+        </a>
       </div>
     </div>
 
@@ -70,6 +78,7 @@
     return{
       name: "",
       marque:"",
+      keys:[],
       datas: myDatas
     }
   },
@@ -77,15 +86,19 @@
     const route = useRoute();
     this.name = route.params.name;
     this.marque = route.params.marque;
+    console.log(route.params);
+    this.keys = (()=>{
+      return Object.keys(this.product)
+    })()
   },
   computed:{
       product(){
-        let tab = this.datas.filter(product => product.nom == this.name);
-        return tab[0];
+        return this.datas.filter(product => product.nom == this.name)[0];
       },
       relatedProduct(){
-        return this.datas.filter(product => product.marque == this.marque);
-        
+        let currentProductMarque = this.datas.filter(product => product.nom == this.name)[0].marque;
+        let productsMarque = this.datas.filter(product => product.marque == currentProductMarque);
+        return productsMarque.filter(product => product.nom != this.name);
       }
   }
 }
@@ -136,8 +149,8 @@
 
   #separeted{
     width: 20% !important;
-    padding: 2px;
-    background-color: grey;
+    padding: 5px;
+    background-color: rgb(6, 180, 44);
     border: none;
     margin-top: 20px;
   }
@@ -208,6 +221,13 @@
     border-bottom: 1px solid grey;
     padding: 15px 0;
   }
+  .productCaracteristique li.nom,
+  .productCaracteristique li.marque,
+  .productCaracteristique li.image,
+  .productCaracteristique li.prix{
+    display: none !important;
+  }
+
   .productCaracteristique li .label{
     font-weight: bold;
     letter-spacing: 1px;
@@ -219,7 +239,7 @@
 
 
 
-  /* ***** BLOC INFORMATIONS PRODUCT ******* */
+  /* *****  PRODUCT RELATED ******* */
   .relatedProducts{
     margin-top: 100px;
   }
@@ -232,13 +252,12 @@
   }
   .productList{
     display: flex;
-    justify-content: space-between;
   }
 
   .productList a{
     display: flex;
     width: 24%;
-
+    margin-right: 40px;
   }
 
   .productList a img{

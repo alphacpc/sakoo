@@ -15,9 +15,9 @@
         </div>
 
         <div class="simpleInfos">
-          <router-link :to="{
-            name:'Detail', params:{name:product.nom , marque:product.marque}
-          }"><h4>{{product.nom}}</h4></router-link>
+          <router-link :to="{name:'Detail', params:{name:product.nom , marque:product.marque}}">
+            <h4>{{product.nom}}</h4>
+          </router-link>
         </div>
         
         <div class="divIcons">
