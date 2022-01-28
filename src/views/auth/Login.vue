@@ -11,12 +11,12 @@
       </div>
 
       <div class="formGroup">
-        <label for="email">E</label>
-        <input type="text" id="email" placeholder="Entre addresse électronique">
+        <label for="email"><fa icon="envelope"/></label>
+        <input type="text" id="email" autocomplete="off" placeholder="Entre addresse électronique">
       </div>
 
       <div class="formGroup">
-        <label for="mdp">M</label>
+        <label for="mdp"><fa icon="lock"/></label>
         <input type="password" id="mdp" placeholder="Entre votre mot de passe">
       </div>
 
@@ -78,8 +78,9 @@
     background-color: white;
     margin-bottom: 20px;
     border: 1px solid grey;
-    padding: 4px 10px;
+    padding: 10px;
     display: flex;
+    border-radius: 4px;
     align-items: center;
     justify-content: space-between;
   }
@@ -88,7 +89,7 @@
     margin-right: 10px;
     background: tomato;
     border-radius: 50%;
-    padding: 4px 8px;
+    padding: 15px;
     color: whitesmoke;
     font-weight: bold;
     cursor: pointer;

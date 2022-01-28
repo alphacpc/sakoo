@@ -11,12 +11,12 @@
         </div>
 
         <div class="simpleInfos">
-          <router-link to="/detail/sakoo"><h4>Tommy Hilfiger</h4></router-link>
+          <router-link to="/"><h4>Tommy Hilfiger</h4></router-link>
         </div>
         
         <div class="divIcons">
-          <span><img src="./../assets/icon1.png" width="30" alt="icon1"></span>
-          <span><img src="./../assets/icon2.png" width="30" alt="icon2"></span>
+          <span><fa icon="heart"/></span>
+          <span><fa icon="shopping-cart"/></span>
         </div>
     </div>
 

@@ -21,8 +21,13 @@
         </div>
         
         <div class="divIcons">
-          <span><img src="./../assets/icon1.png" width="30" alt="icon1"></span>
-          <span><img src="./../assets/icon2.png" width="30" alt="icon2"></span>
+          <div class="heart-icon-container">
+            <input type="checkbox" name="checkbox" v-bind:id="product.nom">
+            <label v-bind:for="product.nom">
+              <fa icon="heart"/>
+            </label>
+          </div>
+          <span class="cart"><fa icon="shopping-cart"/></span>
         </div>
       </div>
     </div>
@@ -128,6 +133,21 @@
     padding: 20px;
     box-shadow: 0 4px 4px 0;
     margin-top: -10px;
+  }
+
+  .divIcons .heart-icon-container svg{
+    cursor: pointer;
+  }
+  .divIcons .heart-icon-container input{
+    display: none;
+  }
+
+  .divIcons .heart-icon-container input:checked ~ label svg{
+    color: red;
+  }
+
+  .divIcons span.cart svg:hover{
+    color: gold;
   }
 
   .divProduct:hover{

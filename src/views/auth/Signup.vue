@@ -10,22 +10,22 @@
       </div>
 
       <div class="formGroup">
-        <label for="email">S</label>
-        <input type="text" id="email" placeholder="Entrer votre nom d'utilisateur">
+        <label for="pseudo"><fa icon="user-tag"/></label>
+        <input type="text" id="pseudo" autocomplete="off" placeholder="Entrer votre nom d'utilisateur">
       </div>
 
       <div class="formGroup">
-        <label for="email">E</label>
-        <input type="text" id="email" placeholder="Entre votre addresse électronique">
+        <label for="email"><fa icon="envelope"/></label>
+        <input type="text" id="email" autocomplete="off" placeholder="Entre votre addresse électronique">
       </div>
 
       <div class="formGroup">
-        <label for="mdp">M</label>
+        <label for="mdp"><fa icon="lock"/></label>
         <input type="password" id="mdp" placeholder="Entre votre mot de passe">
       </div>
 
       <div class="formGroup">
-        <label for="mdp">C</label>
+        <label for="mdp"><fa icon="lock"/></label>
         <input type="password" id="mdp" placeholder="Confimer le mot de passe">
       </div>
 

@@ -6,8 +6,8 @@
 
         <nav id="nav">
             <router-link to="/">Accueil</router-link>
-            <router-link to="/favoris">Favoris</router-link>
-            <router-link to="/panier">Mon panier</router-link>
+            <router-link to="/favoris">favoris</router-link>
+            <router-link to="/panier">Mon panier <fa icon="shopping-cart"/></router-link>
             <router-link to="/auth">se connecter</router-link>
         </nav>
     </div>
