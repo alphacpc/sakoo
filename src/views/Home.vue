@@ -22,7 +22,7 @@
         
         <div class="divIcons">
           <div class="heart-icon-container">
-            <input type="checkbox" name="checkbox" v-bind:id="product.nom">
+            <input type="checkbox" name="checkbox" v-bind:id="product.nom" :value="product" v-model="liked" @click="setLikeStorage()">
             <label v-bind:for="product.nom">
               <fa icon="heart"/>
             </label>
@@ -52,14 +52,24 @@
       return {
         message : "Hello everybody",
         elements: myDatas,
-        searchKey: ""
+        searchKey: "",
+        liked:[]
       }
     },
     computed:{
       productFiltered(){
         return this.elements.filter((product) => product.nom.toLowerCase().includes(this.searchKey.toLowerCase()));
+      },
+    },
+    methods:{
+      setLikeStorage(){
+        document.addEventListener('input',()=>{
+          setTimeout(() => {
+            localStorage.setItem("likes",JSON.stringify(this.liked))
+          }, 300);
+        })
       }
-    }
+    }, 
   }
 
 </script>

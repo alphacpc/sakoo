@@ -6,7 +6,7 @@
 
         <nav id="nav">
             <router-link to="/">Accueil</router-link>
-            <router-link to="/favoris">favoris</router-link>
+            <router-link to="/favoris" v-for="li in getProductLiked" :key="li">favoris</router-link>
             <router-link to="/panier">Mon panier <fa icon="shopping-cart"/></router-link>
             <router-link to="/auth">se connecter</router-link>
         </nav>
@@ -15,8 +15,21 @@
 
 <script>
 
+
 export default {
-    name: "Navbar"
+    name: "Navbar",
+    data : () => {
+      return {
+        likede:[]
+      }
+    },
+    computed:{
+      getProductLiked(){
+          let hello = localStorage.setItem("likes",JSON.stringify(this.liked));
+          console.log(hello);
+          return localStorage.setItem("likes",JSON.stringify(this.liked));
+      },
+    },
 }
 
 </script>
