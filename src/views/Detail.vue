@@ -252,6 +252,7 @@
   }
   .productList{
     display: flex;
+    flex-wrap: wrap;
   }
 
   .productList a{
@@ -262,6 +263,46 @@
 
   .productList a img{
     width: 100%;
+  }
+
+
+  @media only screen and (max-width:768px) {
+    .divInformations{
+      flex-direction: column;
+    }
+    .divProductImage,.divProductInfos{
+      width: 100%;
+    }
+
+    .divProductImage{
+      margin-bottom: 80px;
+      height: 600px;
+    }
+    .divProductImage img{
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .relatedProducts{
+      margin-top: 50px;
+    }
+
+    .productList{
+      flex-direction: row;
+      /* justify-content: space-between; */
+    }
+
+    .productList a{
+      width: 46%;
+      margin-right: 0;
+      margin-bottom: 40px;
+    }
+
+    .productList a:nth-child(2n + 1){
+      margin-right: 6%;
+    }
+
+
   }
 
 </style>

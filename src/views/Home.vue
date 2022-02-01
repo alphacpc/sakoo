@@ -211,4 +211,14 @@
     color: #f05;
   }
 
+
+  @media only screen and (max-width: 768px) {
+    .divProduct{
+      width: 46%;
+    }
+    .divNotResult{
+      padding: 120px 0 200px 0;
+    } 
+  }
+
 </style>

@@ -182,4 +182,20 @@ export default {
     border-radius: 8px;
   }
 
+
+  @media only screen and (max-width:768px) {
+    .divSup{
+      align-items: flex-start;
+    }
+    
+    .linkActions{
+      flex-direction: column;
+    }
+    .linkActions a{
+      width: 100%;
+      padding: 20px 10px;
+      margin-bottom: 10px;
+    }
+  }
+
 </style>

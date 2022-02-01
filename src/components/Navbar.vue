@@ -6,7 +6,7 @@
 
         <nav id="nav">
             <router-link to="/">Accueil</router-link>
-            <router-link to="/favoris" v-for="li in getProductLiked" :key="li">favoris</router-link>
+            <router-link to="/favoris" v-if="[1,2]">favoris</router-link>
             <router-link to="/panier">Mon panier <fa icon="shopping-cart"/></router-link>
             <router-link to="/auth">se connecter</router-link>
         </nav>
@@ -62,5 +62,10 @@ export default {
     color: #42b983;
   }
 
+@media only screen and (max-width:768px) {
+  #nav {
+    width: 80%;
+  }
+}
 
 </style>
