@@ -221,4 +221,11 @@
     } 
   }
 
+  @media only screen and (max-width: 480px) {
+    .divProduct{
+      width: 100%;
+      margin-bottom: 40px;
+    }
+  }
+
 </style>

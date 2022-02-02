@@ -81,7 +81,7 @@ export default {
   tbody td{
     text-align: center;
     padding: 20px 0 !important;
-    border-bottom: 1px solid grey;
+    /* border-bottom: 1px solid grey; */
   }
   tbody tr:last-child td{
     border-bottom: none;
@@ -195,6 +195,47 @@ export default {
       width: 100%;
       padding: 20px 10px;
       margin-bottom: 10px;
+    }
+  }
+
+  @media only screen and (max-width:480px) {
+    .divSup{
+      flex-direction: column-reverse;
+      padding-right: 0;
+      padding-top: 40px;
+      border-top: none;
+    }
+    .divSup .linkActions{
+      width: 100%;
+      padding-top: 40px;
+    }
+
+    .divSup p{
+      text-align: center !important;
+      width: 100%;
+    }
+
+    thead{
+      display: none !important;
+    }
+    table{
+      border: none !important;
+      border-color: thistle !important;
+      border-collapse: unset !important;
+      border-spacing: 0 !important;
+      text-indent: 0%;
+    }
+    tbody tr{
+      display: flex;
+      flex-direction: column;
+      border-bottom: 2px solid #FF8E00;
+
+    }
+
+    tbody th td{
+      border-bottom: 2px solid blue;
+      border: none !important;
+      border: 0px solid transparent;
     }
   }
 

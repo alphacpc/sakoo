@@ -141,4 +141,26 @@
     margin-left: 10px;
   }
 
+
+  @media only screen and (max-width:480px) {
+    .LoginContainer{
+      padding-top: 0px !important;
+    }
+
+    .divSignup{
+      flex-direction: column;
+    }
+
+    .formGroup > label{
+      padding: 8px;
+    }
+    .formGroup input{
+      font-size: 15px;
+    }
+    .divSignup a{
+      margin-left: 0;
+      margin-top: 20px;
+    }
+  }
+
 </style>

@@ -76,4 +76,10 @@ export default {
   }
 
 
+  @media only screen and (max-width: 480px){
+    .SignupContainer{
+      padding-top: 0;
+    }
+  }
+
 </style>

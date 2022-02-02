@@ -23,4 +23,11 @@ export default {
     letter-spacing: 1px;
   }
 
+  @media screen {
+    Footer h2{
+      font-size: 16px;
+      font-weight: 500;
+    }
+  }
+
 </style>
