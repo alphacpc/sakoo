@@ -65,6 +65,10 @@ export default {
     color: #42b983;
   }
 
+  #menu, label[for="menu"]{
+    display: none;
+  }
+
   @media only screen and (max-width:768px) {
     #nav {
       width: 80%;
@@ -103,6 +107,10 @@ export default {
       display: block;
       position: absolute;
       right: 4%;
+    }
+
+    #menu, label[for="menu"]{
+      display: flex;
     }
 
     /* Start checked or not */
