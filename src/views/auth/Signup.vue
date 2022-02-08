@@ -2,31 +2,16 @@
   
   <div class="SignupContainer">
 
-    <form method="post">
+    <form @submit.prevent="handleSubmit">
 
       <div class="panelHead">
-        <h1>Inscription</h1>
+        <h1>{{title}}</h1>
         <hr id="signin">
       </div>
 
-      <div class="formGroup">
-        <label for="pseudo"><fa icon="user-tag"/></label>
-        <input type="text" id="pseudo" autocomplete="off" placeholder="Entrer votre nom d'utilisateur">
-      </div>
-
-      <div class="formGroup">
-        <label for="email"><fa icon="envelope"/></label>
-        <input type="text" id="email" autocomplete="off" placeholder="Entre votre addresse électronique">
-      </div>
-
-      <div class="formGroup">
-        <label for="mdp"><fa icon="lock"/></label>
-        <input type="password" id="mdp" placeholder="Entre votre mot de passe">
-      </div>
-
-      <div class="formGroup">
-        <label for="mdp"><fa icon="lock"/></label>
-        <input type="password" id="mdp" placeholder="Confimer le mot de passe">
+      <div class="formGroup" v-for="(input, index) in inputs" :key="index">
+        <label :for="input.name"><fa :icon="input.icon"/></label>
+        <input :type="input.type" v-model="input.value" :id="input.name" autocomplete="off" :placeholder="input.placeholder">
       </div>
 
       <input type="submit" class="btn-login" value="Enregistrer">
@@ -47,6 +32,51 @@
 <script>
 export default {
   name: 'Signup',
+  data: ()=>{
+    return{
+      title: "Inscription",
+      inputs:[
+        {
+          label:"pseudo",
+          placeholder:"Entrer votre nom d'utilisateur",
+          value: '',
+          name:'username',
+          type: "text",
+          icon:"user-tag"
+        },
+        {
+          label:"Email",
+          placeholder:"Entrer votre addresse electronique",
+          value: '',
+          name:'email',
+          type: "email",
+          icon:"envelope"
+        },
+        {
+          label:"Mot de passe",
+          placeholder:"Entrer votre mot de passe",
+          value: '',
+          name:'password',
+          type: "password",
+          icon:"lock"
+        },
+        {
+          label:"Confirmation du mot de passe",
+          placeholder:"Confirmer votre mot de passe",
+          value: '',
+          name:'cpassword',
+          type: "password",
+          icon:"lock"
+        },
+      ]
+    }
+  },
+  methods:{
+    handleSubmit(){
+      console.log("hello");
+      console.log(this.inputs[0].value,this.inputs[1].value, this.inputs[2].value, this.inputs[3].value);
+    }
+  }
 }
 </script>
 

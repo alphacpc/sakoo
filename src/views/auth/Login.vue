@@ -3,7 +3,7 @@
 
   <div class="LoginContainer">
 
-    <form method="post" @submit.prevent="handleSubmit">
+    <form @submit.prevent="handleSubmit">
 
       <div class="panelHead">
         <h1>{{title}}</h1>
@@ -12,7 +12,7 @@
 
       <div class="formGroup" v-for="(input,index) in inputs" :key="index">
         <label for="email"><fa :icon="input.icon"/></label>
-        <input :type="input.type" id="email" v-model="input.value" autocomplete="off" :placeholder="input.placeholder">
+        <input :type="input.type" :id="input.name" v-model="input.value" autocomplete="off" :placeholder="input.placeholder">
       </div>
 
       <div class="divForget">
@@ -47,6 +47,7 @@
             label:"Email",
             placeholder:"Entrer votre addresse electronique",
             value: '',
+            name:'email',
             type: "email",
             icon:"envelope"
           },
@@ -54,6 +55,7 @@
             label:"Mot de passe",
             placeholder:"Entrer votre mot de passe",
             value: '',
+            name:'password',
             type: "password",
             icon:"lock"
           },
