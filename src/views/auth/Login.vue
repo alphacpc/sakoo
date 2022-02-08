@@ -3,21 +3,16 @@
 
   <div class="LoginContainer">
 
-    <form method="post">
+    <form method="post" @submit.prevent="handleSubmit">
 
       <div class="panelHead">
-        <h1>Connexion</h1>
+        <h1>{{title}}</h1>
         <hr id="signin">
       </div>
 
-      <div class="formGroup">
-        <label for="email"><fa icon="envelope"/></label>
-        <input type="text" id="email" autocomplete="off" placeholder="Entre addresse électronique">
-      </div>
-
-      <div class="formGroup">
-        <label for="mdp"><fa icon="lock"/></label>
-        <input type="password" id="mdp" placeholder="Entre votre mot de passe">
+      <div class="formGroup" v-for="(input,index) in inputs" :key="index">
+        <label for="email"><fa :icon="input.icon"/></label>
+        <input :type="input.type" id="email" v-model="input.value" autocomplete="off" :placeholder="input.placeholder">
       </div>
 
       <div class="divForget">
@@ -40,9 +35,37 @@
 
 <script>
 
-
+  
   export default {
     name: 'Login',
+
+    data: ()=>{
+      return {
+        title:"Connexion",
+        inputs: [
+          {
+            label:"Email",
+            placeholder:"Entrer votre addresse electronique",
+            value: '',
+            type: "email",
+            icon:"envelope"
+          },
+          {
+            label:"Mot de passe",
+            placeholder:"Entrer votre mot de passe",
+            value: '',
+            type: "password",
+            icon:"lock"
+          },
+        ]
+      }
+    },
+    methods:{
+      handleSubmit(){
+        console.log(this.inputs[0].value, this.inputs[1].value);
+      }
+    },
+    
   }
 
 
