@@ -31,7 +31,7 @@
         </div>
 
         <div class="productAddCart">
-          <button class="btn-add-cart">Ajouter au panier</button>
+          <button class="btn-add-cart" @click="addToCart()">Ajouter au panier</button>
         </div>
 
         <div class="productCaracteristique">
@@ -40,7 +40,6 @@
             <li v-for="key in keys" :key="key" :class="`${key}`">
               <span class="label">{{key}}</span><span class="value">{{product[key]}}</span>
             </li>
-            <!-- <li v-for="item in [1,2,3,4]" :key="item"><span class="label">Matiére</span><span class="value">Polyuréthane, polyester</span></li> -->
           </ul>
         </div>
 
@@ -52,9 +51,6 @@
       <h2>Produits associés</h2>
 
       <div class="productList">
-        <!-- <router-link v-for="item in relatedProduct" :key="item" :to="{name:'Detail', params:{name:item.nom , marque:item.marque}}">
-          <img :src="require(`./../assets/images/${item.image}`)" alt="">
-        </router-link> -->
 
         <a v-for="item in relatedProduct" :key="item" :href="$router.resolve({name:'Detail', params:{ name:item.nom}}).href">
           <img :src="require(`./../assets/images/${item.image}`)" alt="">
@@ -100,6 +96,11 @@
         let productsMarque = this.datas.filter(product => product.marque == currentProductMarque);
         return productsMarque.filter(product => product.nom != this.name);
       }
+  },
+  methods: {
+    addToCart(){
+      alert("added to cart !!!")
+    }
   }
 }
 </script>

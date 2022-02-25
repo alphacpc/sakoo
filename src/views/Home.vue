@@ -27,7 +27,7 @@
               <fa icon="heart"/>
             </label>
           </div>
-          <span class="cart"><fa icon="shopping-cart"/></span>
+          <span class="cart" @click="addToCart()"><fa icon="shopping-cart"/></span>
         </div>
       </div>
     </div>
@@ -68,6 +68,9 @@
             localStorage.setItem("likes",JSON.stringify(this.liked))
           }, 300);
         })
+      },
+      addToCart(){
+        alert("Add to cart second !")
       }
     }, 
   }
