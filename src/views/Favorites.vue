@@ -1,42 +1,75 @@
 <template>
 
 
-  <h1>Mes Favoris <span>(2 articles)</span></h1>
+  <div v-if="loadFavorites">
+    <h1>Mes Favoris <span>({{loadFavorites.length}} {{ (loadFavorites.length == 1) ? 'article' : 'articles'}})</span></h1>
 
-  <div class="FavoprisContainer">
-    
-    <div v-for="product in [1,2,3]" :key="product" class="divProduct">
-        <div class="divImage">
-          <img src="./../assets/images/sac10.jpg" alt="">
-        </div>
+    <div class="FavoprisContainer">
+      
+      <div v-for="product in loadFavorites" :key="product" class="divProduct">
+          <div class="divImage">
+            <img :src="require(`./../assets/images/${product.image}`)" alt="">
+          </div>
 
-        <div class="simpleInfos">
-          <router-link to="/"><h4>Tommy Hilfiger</h4></router-link>
-        </div>
-        
-        <div class="divIcons">
-          <span><fa icon="heart"/></span>
-          <span><fa icon="shopping-cart"/></span>
-        </div>
+          <div class="simpleInfos">
+            <router-link to="/"><h4>{{product.nom}}</h4></router-link>
+          </div>
+          
+          <div class="divIcons">
+            <span><fa icon="heart"/></span>
+            <span><fa icon="shopping-cart"/></span>
+          </div>
+      </div>
     </div>
+  </div>
 
     <!-- PAS DE FAVORIS -->
-    <div v-if="product" class="noFavoris">
-      <img src="./../assets/coup-de-coeur.png" alt="">
-      <p>Aucun produit aimé pour le moment !</p>
-    </div>
-
+  <div v-else class="noFavoris">
+    <img src="./../assets/coup-de-coeur.png" alt="">
+    <p>Aucun produit aimé pour le moment !</p>
   </div>
+
+
 
 
 
 </template>
 
+
+
+
+
+
 <script>
-export default {
-    name:"Favorites"
-}
+
+  export default {
+      name:"Favorites",
+
+      computed: {
+        loadFavorites(){
+          console.log(JSON.parse(localStorage.getItem("likes")))
+          return JSON.parse(localStorage.getItem("likes"))
+        }
+      }
+  }
+  
+
 </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <style>
   .FavoprisContainer{

@@ -63,11 +63,9 @@
     },
     methods:{
       setLikeStorage(){
-        document.addEventListener('input',()=>{
           setTimeout(() => {
             localStorage.setItem("likes",JSON.stringify(this.liked))
           }, 300);
-        })
       },
       addToCart(){
         alert("Add to cart second !")
