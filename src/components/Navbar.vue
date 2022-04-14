@@ -9,7 +9,7 @@
         </label>
         <nav id="nav">
             <router-link to="/">Accueil</router-link>
-            <router-link to="/favoris" v-if="[1,2]">favoris</router-link>
+            <router-link to="/favoris"><fa id="faIcon" icon="heart"/><span v-if="getProductLiked > 0" id="lengthFav">{{getProductLiked}}</span></router-link>
             <router-link to="/panier">Mon panier <fa icon="shopping-cart"/></router-link>
             <router-link to="/auth">se connecter</router-link>
         </nav>
@@ -28,11 +28,13 @@ export default {
     },
     computed:{
       getProductLiked(){
-          let hello = localStorage.setItem("likes",JSON.stringify(this.liked));
-          console.log(hello);
-          return localStorage.setItem("likes",JSON.stringify(this.liked));
+          return JSON.parse(localStorage.getItem("likes")).length;
       },
     },
+    updated: () => {
+      this.getProductLiked()
+    }
+
 }
 
 </script>
@@ -68,6 +70,24 @@ export default {
   #menu, label[for="menu"]{
     display: none;
   }
+
+  #faIcon{
+    width: 30px;
+    height: 30px;
+    position: relative;
+    z-index: 2;
+  }
+
+  #lengthFav{
+    background: #F05;
+    color: #FFFFFF;
+    font-size: 10px;
+    font-weight: bold;
+    padding: 2px 5px;
+    border-radius: 50%;
+    position: absolute;
+  }
+
 
   @media only screen and (max-width:768px) {
     #nav {

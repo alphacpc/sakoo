@@ -9,34 +9,7 @@
     </div>
 
     <div class="divCardContainer">
-      <div v-for="product in productFiltered" :key="product" class="divProduct">
-        <div class="divImage">
-          <img :src="require(`./../assets/images/${product.image}`)" alt="">
-        </div>
-
-        <div class="simpleInfos">
-          <a :href="$router.resolve({name:'Detail', params:{ name:product.nom}}).href">
-            <h4>{{product.nom}}</h4>
-          </a>
-        </div>
-        
-        <div class="divIcons">
-          <div class="heart-icon-container">
-            <input 
-              type="checkbox" 
-              name="checkbox" 
-              v-bind:id="product.nom" 
-              :value="product" 
-              v-model="liked" 
-              @click="setLikeStorage()"
-            >
-            <label v-bind:for="product.nom">
-              <fa icon="heart"/>
-            </label>
-          </div>
-          <span class="cart" @click="addToCart()"><fa icon="shopping-cart"/></span>
-        </div>
-      </div>
+      <Product :products="productFiltered"/>
     </div>
 
     <!-- NO RESULT WITH SEARCH -->
@@ -50,6 +23,8 @@
 <script>
 
   import myDatas from "./../data.json";
+  import Product from "./../components/Product.vue";
+
 
   var likeds = []
 
@@ -63,6 +38,7 @@
         liked : likeds
       }
     },
+    components: {Product},
     computed:{
       productFiltered(){
         return this.elements.filter((product) => product.nom.toLowerCase().includes(this.searchKey.toLowerCase()));
@@ -79,24 +55,23 @@
         alert("Add to cart second !")
       }
     },
+    mounted: ()=>{
+      let inputsCheckbox = document?.querySelectorAll(".divProduct input")
 
-    mounted : () => {
+      const checkboxCheck = () => {
+        
+        let likes = JSON.parse(localStorage.getItem("likes"))
 
-      function getLikeStorage(){
-        const likes = JSON.parse(localStorage.getItem("likes"))
-        likeds = likes == null ? [] : likes
-
-        if(likeds.length > 0){ 
-          for(let el of likeds){
-            console.log(el.nom)
+        for(let el of inputsCheckbox){
+          for(let liked of likes){
+            if(el.id == liked.nom){
+              el.checked = true
+            }
           }
         }
-
-        console.log(likeds)
       }
-      getLikeStorage()
-    }
-    
+      checkboxCheck()
+    }    
   }
 
 </script>
@@ -155,9 +130,9 @@
 
   .divProduct .simpleInfos h4:hover{
     color: #f05;
-  }
+  } 
 
-  .divImage > img{
+  .divImage img{
     width: 100%;
     height: 100%;
     border-radius: 0px 20px 0px 0px ;

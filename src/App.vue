@@ -14,21 +14,28 @@
 import Navbar from "./components/Navbar.vue";
 import Footer from "./components/Footer.vue";
 
-window.addEventListener('load', () => {
-  alert("Sassssss")
-  let inputCheckboxLiked = document?.querySelectorAll(".divProduct input")
+// window.addEventListener('load', () => {
 
-  const checkboxCheck = () => {
-    for(let el of inputCheckboxLiked){
-      if(el.checked){
-        return true
-      }
-    }
-    return false
-  }
-  console.log(checkboxCheck())
+//   let inputsCheckbox = document?.querySelectorAll(".divProduct input")
+
+//   const checkboxCheck = () => {
+    
+//     let likes = JSON.parse(localStorage.getItem("likes"))
+
+//     for(let el of inputsCheckbox){
+//       for(let liked of likes){
+//         if(el.id == liked.nom){
+//           el.checked = true
+//         }
+//       }
+//     }
+//   }
+
+//   checkboxCheck()
+
+//   document.addEventListener('click', checkboxCheck)
   
-})
+// })
   
 
 export default{
@@ -37,17 +44,6 @@ export default{
   components:{
     Navbar,
     Footer
-  },
-  mounted: ()=>{
-    
-    let getAllLikes = () => {
-      console.log("salam")
-    }
-
-    document.addEventListener('click', ()=>{
-        getAllLikes()
-    })
-    
   }
 
 }

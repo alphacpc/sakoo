@@ -1,25 +1,12 @@
 <template>
 
-
   <div v-if="loadFavorites">
     <h1>Mes Favoris <span>({{loadFavorites.length}} {{ (loadFavorites.length == 1) ? 'article' : 'articles'}})</span></h1>
 
     <div class="FavoprisContainer">
       
-      <div v-for="product in loadFavorites" :key="product" class="divProduct">
-          <div class="divImage">
-            <img :src="require(`./../assets/images/${product.image}`)" alt="">
-          </div>
-
-          <div class="simpleInfos">
-            <router-link to="/"><h4>{{product.nom}}</h4></router-link>
-          </div>
-          
-          <div class="divIcons">
-            <span><fa icon="heart"/></span>
-            <span><fa icon="shopping-cart"/></span>
-          </div>
-      </div>
+      <Product :products="loadFavorites"/>
+      
     </div>
   </div>
 
@@ -29,12 +16,7 @@
     <p>Aucun produit aimé pour le moment !</p>
   </div>
 
-
-
-
-
 </template>
-
 
 
 
@@ -42,15 +24,17 @@
 
 <script>
 
+  import Product from "./../components/Product.vue";
+
   export default {
       name:"Favorites",
-
       computed: {
         loadFavorites(){
-          console.log(JSON.parse(localStorage.getItem("likes")))
           return JSON.parse(localStorage.getItem("likes"))
         }
-      }
+      },
+      components: {Product},
+
   }
   
 
