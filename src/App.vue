@@ -14,12 +14,40 @@
 import Navbar from "./components/Navbar.vue";
 import Footer from "./components/Footer.vue";
 
+window.addEventListener('load', () => {
+  alert("Sassssss")
+  let inputCheckboxLiked = document?.querySelectorAll(".divProduct input")
+
+  const checkboxCheck = () => {
+    for(let el of inputCheckboxLiked){
+      if(el.checked){
+        return true
+      }
+    }
+    return false
+  }
+  console.log(checkboxCheck())
+  
+})
+  
 
 export default{
-  
+
+
   components:{
     Navbar,
     Footer
+  },
+  mounted: ()=>{
+    
+    let getAllLikes = () => {
+      console.log("salam")
+    }
+
+    document.addEventListener('click', ()=>{
+        getAllLikes()
+    })
+    
   }
 
 }

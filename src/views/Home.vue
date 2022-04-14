@@ -22,7 +22,14 @@
         
         <div class="divIcons">
           <div class="heart-icon-container">
-            <input type="checkbox" name="checkbox" v-bind:id="product.nom" :value="product" v-model="liked" @click="setLikeStorage()">
+            <input 
+              type="checkbox" 
+              name="checkbox" 
+              v-bind:id="product.nom" 
+              :value="product" 
+              v-model="liked" 
+              @click="setLikeStorage()"
+            >
             <label v-bind:for="product.nom">
               <fa icon="heart"/>
             </label>
@@ -44,7 +51,7 @@
 
   import myDatas from "./../data.json";
 
-
+  var likeds = []
 
   export default {
     name: 'Home',
@@ -53,13 +60,14 @@
         message : "Hello everybody",
         elements: myDatas,
         searchKey: "",
-        liked:[]
+        liked : likeds
       }
     },
     computed:{
       productFiltered(){
         return this.elements.filter((product) => product.nom.toLowerCase().includes(this.searchKey.toLowerCase()));
       },
+      
     },
     methods:{
       setLikeStorage(){
@@ -70,7 +78,25 @@
       addToCart(){
         alert("Add to cart second !")
       }
-    }, 
+    },
+
+    mounted : () => {
+
+      function getLikeStorage(){
+        const likes = JSON.parse(localStorage.getItem("likes"))
+        likeds = likes == null ? [] : likes
+
+        if(likeds.length > 0){ 
+          for(let el of likeds){
+            console.log(el.nom)
+          }
+        }
+
+        console.log(likeds)
+      }
+      getLikeStorage()
+    }
+    
   }
 
 </script>
@@ -150,7 +176,7 @@
     cursor: pointer;
   }
   .divIcons .heart-icon-container input{
-    display: none;
+    /* display: none; */
   }
 
   .divIcons .heart-icon-container input:checked ~ label svg{
