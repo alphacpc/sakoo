@@ -27,7 +27,9 @@
                 <fa icon="heart"/>
                 </label>
             </div>
-            <span class="cart" @click="addToCart()"><fa icon="shopping-cart"/></span>
+            <button
+                class="cart"
+                @click="addToCart(product)"><fa icon="shopping-cart"/></button>
         </div>
     </div>
   
@@ -73,10 +75,29 @@ export default {
             document.querySelector("#lengthFav").innerHTML = this.liked.length
 
         },
-        addToCart(){
+        addToCart(product){
+
+            for(let i in this.panier){
+                if(this.panier[i].nom == product.nom){
+                    return this.panier[i].quantite++
+                }
+            }
+
+            let newProduct = {
+                nom: product.nom,
+                image: product.image,
+                matiere : product.matiere,
+                quantite : 1,
+                prix : product.prix
+            }
+
+            this.panier.push(newProduct)
+
             setTimeout(() => {
                 localStorage.setItem("cart",JSON.stringify(this.panier))
             }, 300);
+
+            console.log(this.panier)
         }
     },
     mounted(){
