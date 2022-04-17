@@ -46,6 +46,11 @@ export default {
       }
     },
     props: ['products'],
+    computed: {
+        getProductLiked(){
+          return JSON.parse(localStorage.getItem("likes"));
+        }
+    },
     methods:{
       setLikeStorage(){
           setTimeout(() => {
@@ -56,8 +61,8 @@ export default {
         alert("Add to cart second !")
       }
     },
-    updated: ()=>{
-        this.setLikeStorage
+    mounted: () => {
+        this.getProductLiked()
     }
 }
 

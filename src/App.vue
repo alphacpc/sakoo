@@ -37,6 +37,10 @@ import Footer from "./components/Footer.vue";
   
 // })
   
+// window.addEventListener('storage', () => {
+//   console.log("changed local storage")
+// })
+
 
 export default{
 
