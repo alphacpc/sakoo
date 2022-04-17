@@ -17,17 +17,17 @@
       </thead>
 
       <tbody>
-        <tr v-for="item in [1,2,3,4]" :key="item">
+        <tr v-for="product in getProductLiked()" :key="product.nom">
           <td class="delete"><span>X</span></td>
           <td><img src="./../assets/images/sac1.jpg" width="100" alt="lacoste"></td>
-          <td>lacoste Sac bandoulière</td>
-          <td>Chlorure de polyvinyle</td>
+          <td>{{product.nom}}</td>
+          <td>{{product.matiere}}</td>
           <td class="quantity">
             <span id="less">-</span>
-            <span id="value">1</span>
-            <span id="add">+</span>
+            <span id="value">{{product.quantite}}</span>
+            <span id="add" @click="addQuantity(product)">+</span>
           </td>
-          <td class="price">12000 FCFA</td>
+          <td class="price">{{product.prix}} FCFA</td>
         </tr>
       </tbody>
     </table>
@@ -51,7 +51,22 @@
 
 <script>
 export default {
-    name: 'Cart'
+    name: 'Cart',
+    methods : {
+      getProductLiked(){
+        let panier = JSON.parse(localStorage.getItem("cart"))
+        return (panier == null) ? [] : panier
+      },
+      addQuantity(product){
+        product.quantite = product.quantite++
+      },
+      lessQuantity(product){
+        product.quantite = product.quantite--
+      }
+    },
+    mounted(){
+      this.getProductLiked()
+    }
 }
 </script>
 

@@ -125,8 +125,18 @@
     color: red;
   }
 
-  .divIcons span.cart svg:hover{
-    color: gold;
+  .divIcons button.cart{
+    border: none;
+    background: none;
+    transition: all ease .3s;
+    cursor: pointer;
+  }
+
+  .divIcons button.cart:hover{
+    /* color: gold; */
+    background: rgb(255, 184, 52);
+    padding: 0px;
+    border-radius: 50%;
   }
 
   .divProduct:hover{
