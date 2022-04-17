@@ -35,33 +35,30 @@
 
 <script>
 
-let likeds = []
-
 
 export default {
     name:"Product",
+    props: ['products'],
     data : () => {
       return {
-        liked : likeds
+        liked : []
       }
-    },
-    props: ['products'],
-    computed: {
-        getProductLiked(){
-          return JSON.parse(localStorage.getItem("likes"));
-        }
     },
     methods:{
-      setLikeStorage(){
-          setTimeout(() => {
-            localStorage.setItem("likes",JSON.stringify(this.liked))
-          }, 300);
-      },
-      addToCart(){
-        alert("Add to cart second !")
-      }
+        setLikeStorage(){
+            setTimeout(() => {
+                localStorage.setItem("likes",JSON.stringify(this.liked))
+            }, 300);
+        },
+        getProductLiked(){
+            let productsLiked = JSON.parse(localStorage.getItem("likes"))
+            this.liked = (productsLiked == null) ? [] : productsLiked
+        },
+        addToCart(){
+            alert("Add to cart second !")
+        }
     },
-    mounted: () => {
+    mounted(){
         this.getProductLiked()
     }
 }

@@ -14,42 +14,12 @@
 import Navbar from "./components/Navbar.vue";
 import Footer from "./components/Footer.vue";
 
-// window.addEventListener('load', () => {
-
-//   let inputsCheckbox = document?.querySelectorAll(".divProduct input")
-
-//   const checkboxCheck = () => {
-    
-//     let likes = JSON.parse(localStorage.getItem("likes"))
-
-//     for(let el of inputsCheckbox){
-//       for(let liked of likes){
-//         if(el.id == liked.nom){
-//           el.checked = true
-//         }
-//       }
-//     }
-//   }
-
-//   checkboxCheck()
-
-//   document.addEventListener('click', checkboxCheck)
-  
-// })
-  
-// window.addEventListener('storage', () => {
-//   console.log("changed local storage")
-// })
-
 
 export default{
-
-
   components:{
     Navbar,
     Footer
   }
-
 }
 </script>
 

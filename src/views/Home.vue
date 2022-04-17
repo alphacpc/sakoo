@@ -25,53 +25,20 @@
   import myDatas from "./../data.json";
   import Product from "./../components/Product.vue";
 
-
-  var likeds = []
-
   export default {
     name: 'Home',
     data : () => {
       return {
-        message : "Hello everybody",
         elements: myDatas,
         searchKey: "",
-        liked : likeds
       }
     },
     components: {Product},
     computed:{
       productFiltered(){
         return this.elements.filter((product) => product.nom.toLowerCase().includes(this.searchKey.toLowerCase()));
-      },
-      
-    },
-    methods:{
-      setLikeStorage(){
-          setTimeout(() => {
-            localStorage.setItem("likes",JSON.stringify(this.liked))
-          }, 300);
-      },
-      addToCart(){
-        alert("Add to cart second !")
       }
-    },
-    mounted: ()=>{
-      let inputsCheckbox = document?.querySelectorAll(".divProduct input")
-
-      const checkboxCheck = () => {
-        
-        let likes = JSON.parse(localStorage.getItem("likes"))
-
-        for(let el of inputsCheckbox){
-          for(let liked of likes){
-            if(el.id == liked.nom){
-              el.checked = true
-            }
-          }
-        }
-      }
-      checkboxCheck()
-    }    
+    }
   }
 
 </script>

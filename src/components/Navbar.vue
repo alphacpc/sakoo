@@ -9,7 +9,8 @@
         </label>
         <nav id="nav">
             <router-link to="/">Accueil</router-link>
-            <router-link to="/favoris"><fa id="faIcon" icon="heart"/><span v-if="getProductLiked > 0" id="lengthFav">{{getProductLiked}}</span></router-link>
+            <router-link to="/favoris"><fa id="faIcon" icon="heart"/></router-link>
+            <!-- <router-link to="/favoris"><fa id="faIcon" icon="heart"/><span v-if="getProductLiked > 0" id="lengthFav">{{getProductLiked}}</span></router-link> -->
             <router-link to="/panier">Mon panier <fa icon="shopping-cart"/></router-link>
             <router-link to="/auth">se connecter</router-link>
         </nav>
@@ -21,20 +22,6 @@
 
 export default {
     name: "Navbar",
-    data : () => {
-      return {
-        likede:[]
-      }
-    },
-    computed:{
-      getProductLiked(){
-          return JSON.parse(localStorage.getItem("likes")).length;
-      },
-    },
-    updated: () => {
-      this.getProductLiked()
-    },
-
 }
 
 </script>
