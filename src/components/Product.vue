@@ -41,21 +41,42 @@ export default {
     props: ['products'],
     data : () => {
       return {
-        liked : []
+        liked : [],
+        panier: []
       }
     },
-    methods:{
+    methods : {
         setLikeStorage(){
+
             setTimeout(() => {
                 localStorage.setItem("likes",JSON.stringify(this.liked))
+
+                if(this.liked.length > 0){
+                    document.querySelector("#lengthFav").classList.add("visible")
+                }else{
+                    document.querySelector("#lengthFav").classList.remove("visible")
+                }
+                document.querySelector("#lengthFav").innerHTML = this.liked.length
+
+
             }, 300);
         },
         getProductLiked(){
             let productsLiked = JSON.parse(localStorage.getItem("likes"))
             this.liked = (productsLiked == null) ? [] : productsLiked
+
+            if(this.liked.length > 0){
+                document.querySelector("#lengthFav").classList.add("visible")
+            }else{
+                document.querySelector("#lengthFav").classList.remove("visible")   
+            }
+            document.querySelector("#lengthFav").innerHTML = this.liked.length
+
         },
         addToCart(){
-            alert("Add to cart second !")
+            setTimeout(() => {
+                localStorage.setItem("cart",JSON.stringify(this.panier))
+            }, 300);
         }
     },
     mounted(){

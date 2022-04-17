@@ -28,12 +28,12 @@
 
   export default {
       name:"Favorites",
+      components: {Product},
       computed: {
         loadFavorites(){
           return JSON.parse(localStorage.getItem("likes"))
         }
-      },
-      components: {Product},
+      }
 
   }
   
@@ -45,21 +45,12 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
 <style>
   .FavoprisContainer{
     display: flex;
     flex-wrap: wrap;
     padding-bottom: 100px;
+    min-height: 60vh;
   }
 
 

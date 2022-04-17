@@ -118,7 +118,7 @@
     cursor: pointer;
   }
   .divIcons .heart-icon-container input{
-    /* display: none; */
+    display: none;
   }
 
   .divIcons .heart-icon-container input:checked ~ label svg{
